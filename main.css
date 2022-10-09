@@ -1,0 +1,61 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lightgrey: hsl(212, 45%, 89%);
+    --greyishblue: hsl(220, 15%, 55%);
+    --darkblue: hsl(218, 44%, 22%);
+}
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+
+    /* Set font size for easy rem calculations
+        * default document font size = 16px, 1rem = 16px, 100% = 16px
+        * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem; /* 15px */
+    color: var(--darkblue);
+    background: var(--lightgrey);
+    overflow-x: hidden;
+}
+
+.card, .qr-image>img {
+    border-radius: 10px;
+    width: 330px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    background: var(--white);
+    text-align: center;
+    margin: 50px auto 10px auto;
+    padding: 10px;
+}
+.text-container {
+    margin-top: 15px;
+}
+.text-container>p {
+    color: var(--greyishblue);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
